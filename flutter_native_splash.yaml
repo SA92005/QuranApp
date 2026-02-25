@@ -1,0 +1,10 @@
+# flutter_native_splash:
+  # color: "#054C4C"
+  # image: assets\images\splash_android_ios_11.png
+  # android_12:
+  #   color: "#054C4C"
+  #   image: assets\images\splash_android_ios_12.png
+flutter_native_splash:
+  color: "#054C4C"   # اللون الأخضر اللي اخترتيه
+  android: true
+  ios: true
