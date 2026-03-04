@@ -37,6 +37,12 @@ dependencies:
   flutter_native_splash: ^2.4.7
   animated_text_kit: ^4.3.0
   hive: ^2.2.3
+  injectable: ^2.7.1+4
+  get_it: ^9.2.1
+  dio: ^5.9.1
+  flutter_bloc: ^9.1.1
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +57,7 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.4
   hive_generator: ^2.0.1
   injectable_generator: ^2.6.2
+  build_runner: ^2.4.13
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -86,13 +93,22 @@ flutter:
         - asset: fonts/Amiri/Amiri-BoldItalic.ttf
         - asset: fonts/Amiri/Amiri-Italic.ttf
         - asset: fonts/Amiri/Amiri-Regular.ttf
-       
+    - family: Reem_Kufi_Fun
+      fonts:
+        - asset: fonts/Reem_Kufi_Fun/ReemKufiFun-VariableFont_wght.ttf
+        - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-Bold.ttf
+        - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-Medium.ttf
+        - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-Regular.ttf
+        - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-SemiBold.ttf
+    - family: ScheherazadeNew
+      fonts:
+        - asset: fonts/ScheherazadeNew/ScheherazadeNew-Bold.ttf
+        - asset: fonts/ScheherazadeNew/ScheherazadeNew-Medium.ttf
+        - asset: fonts/ScheherazadeNew/ScheherazadeNew-Regular.ttf
+        # - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-Regular.ttf
+        # - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-SemiBold.ttf
          
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
