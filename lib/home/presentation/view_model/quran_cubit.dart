@@ -13,12 +13,6 @@ class QuranCubit extends Cubit<QuranStates> {
   Future<void> fetchQuran() async {
     emit(QuranLoadingState());
     final result = await quranUsecase.getQuran();
-
-    if (result is SuccessAPI<QuranEntity>) {
-      emit(QuranSuccsessState(result.data!.data));
-      return;
-    }
-
     switch (result) {
       case SuccessAPI<QuranEntity>():
         emit(QuranSuccsessState(result.data!.data));
