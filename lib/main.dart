@@ -1,8 +1,20 @@
-import 'package:flutter/material.dart';
-import 'package:quran_app/core/utilities/colors.dart';
-import 'package:quran_app/screens/splash_text.dart';
+import 'dart:io';
 
-void main() {
+import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:quran_app/core/di/injectable.dart';
+import 'package:quran_app/home/domain/entity/quran_entity.dart';
+import 'package:quran_app/home/presentation/view/home_screen.dart';
+
+void main() async {
+  configureDependencies();
+
+  await Hive.initFlutter();
+  Hive.registerAdapter(QuranEntityAdapter());
+  Hive.registerAdapter(DataEntityAdapter());
+  Hive.registerAdapter(SurahsEntityAdapter());
+  Hive.registerAdapter(AyahsEntityAdapter());
+  await Hive.openBox<QuranEntity>('quran_box');
   runApp(const QuranApp());
 }
 
@@ -11,20 +23,6 @@ class QuranApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Home();
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: AppColors.splash,
-        body: Center(child: SplashText()),
-      ),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Home());
   }
 }
