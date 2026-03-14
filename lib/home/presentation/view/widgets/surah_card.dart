@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/core/utilities/style.dart';
+import 'package:quran_app/core/utilities/theme/app_style.dart';
 
 class SurahCard extends StatelessWidget {
   const SurahCard({

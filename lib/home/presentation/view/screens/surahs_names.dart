@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_app/core/di/injectable.dart';
-import 'package:quran_app/core/utilities/app_images.dart';
-import 'package:quran_app/core/utilities/colors.dart';
+import 'package:quran_app/core/utilities/assets/app_images.dart';
+import 'package:quran_app/core/utilities/theme/app_color.dart';
 import 'package:quran_app/core/widget/loading.dart';
-import 'package:quran_app/core/widget/surah_card.dart';
+import 'package:quran_app/home/presentation/view/widgets/surah_card.dart';
 
 import 'package:quran_app/home/presentation/view_model/quran_cubit.dart';
 import 'package:quran_app/home/presentation/view_model/quran_states.dart';
+import 'package:quran_app/surah_text/presentation/veiw/screens/surah_text_veiw_scroll.dart';
 
 class Surah extends StatefulWidget {
   const Surah({super.key});
@@ -51,7 +52,17 @@ class _SurahState extends State<Surah> {
                         name: surahs[index].name,
                         ayaNumber: surahs[index].ayahs.length,
                         type: surahs[index].revelationType,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SurahTextVeiwScroll(
+                                ayahs: surahs[index].ayahs,
+                                surahName: surahs[index].name,
+                              ),
+                            ),
+                          );
+                        },
                       );
                     },
                     separatorBuilder: (context, index) =>

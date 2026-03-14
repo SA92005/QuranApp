@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/core/utilities/colors.dart';
-import 'package:quran_app/home/presentation/view/widgets/surah.dart';
+import 'package:quran_app/core/utilities/theme/app_color.dart';
+import 'package:quran_app/home/presentation/view/screens/surahs_names.dart';
 import 'package:quran_app/screens/splash_text.dart';
 
 class Home extends StatefulWidget {

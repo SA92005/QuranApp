@@ -43,6 +43,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   hive_flutter: ^1.1.0
   path_provider: ^2.1.5
+  pinch_zoom: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -107,6 +108,9 @@ flutter:
         - asset: fonts/ScheherazadeNew/ScheherazadeNew-Regular.ttf
         # - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-Regular.ttf
         # - asset: fonts/Reem_Kufi_Fun/static/ReemKufiFun-SemiBold.ttf
+    - family: UthmanicHafs
+      fonts:
+        - asset: fonts/UthmanicHafs/Hafs-Font-v0.09.otf
          
   
   #

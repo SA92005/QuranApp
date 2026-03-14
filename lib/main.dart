@@ -1,10 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:quran_app/core/di/injectable.dart';
 import 'package:quran_app/home/domain/entity/quran_entity.dart';
-import 'package:quran_app/home/presentation/view/home_screen.dart';
+import 'package:quran_app/home/presentation/view/screens/home_screen.dart';
 
 void main() async {
   configureDependencies();
